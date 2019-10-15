@@ -1,0 +1,55 @@
+<div class="row">
+  <h3 class="col-md-12 clearfix">
+    ADD NEW ANIMAL
+  </h3>
+</div>
+<hr />
+<form class="form" name="newAnimal" novalidate ng-submit="submitForm()">
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="common_name">Name</label>
+      <input
+        type="text"
+        id="common_name"
+        name="common_name"
+        class="form-control"
+        ng-model="formData.common_name"
+        required
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="sci_name">Science name</label>
+      <input
+        type="text"
+        id="sci_name"
+        name="sci_name"
+        class="form-control"
+        ng-model="formData.sci_name"
+        required
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="endanger_level">Endanger level</label>
+      <input
+        type="number"
+        id="endanger_level"
+        name="endanger_level"
+        min="0"
+        max="7"
+        class="form-control"
+        ng-model="formData.endanger_level"
+        required
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="submit" class="btn btn-primary" value="Save" ng-disabled="newAnimal.$invalid" />
+      <input class="btn btn-warning" type="button" value="Cancel" />
+    </div>
+  </div>
+</form>

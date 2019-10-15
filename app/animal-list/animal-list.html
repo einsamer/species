@@ -1,0 +1,36 @@
+<div class="row clearfix">
+  <h3 class="col-md-12 clearfix">
+    List Animal
+  </h3>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <hr />
+    <button ng-click="goToNew()">Add New</button>
+    <div class="form-group pull-right">
+      <label for="aFilter" >Search</label>
+      <input type="text" ng-model="aFilter" id="aFilter" class="form-control pull-right" />
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <th class="text-center">ID</th>
+        <th>Commom name</th>
+        <th>Sci. name</th>
+        <th class="text-center">Endanger</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="animal in animalList | filter:aFilter">
+          <td>{{animal.id}}</td>
+          <td>{{animal.common_name}}</td>
+          <td>{{animal.sci_name}}</td>
+          <td>{{animal.endanger_level}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+</div>
