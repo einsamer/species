@@ -20,4 +20,13 @@ angular.module('myApp.animalList', ['ngRoute'])
   $scope.goToNew = () => {
     $location.path('/animals/new');
   }
+
+  $scope.goToDetail = (id) => {
+    $location.path(`/animals/${id}`);
+  }
+
+  $scope.goToEdit = ($event, id) => {
+    $event.stopPropagation();
+    $location.path(`/animals/${id}/edit`);
+  }
 }]);

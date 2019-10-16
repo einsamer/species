@@ -6,6 +6,8 @@ angular.module('myApp', [
   'myApp.dashboard',
   'myApp.animalList',
   'myApp.newAnimal',
+  'myApp.animalDetail',
+  'myApp.editAnimal',
   'myApp.plantList',
   'myApp.version'
 ]).
