@@ -16,19 +16,10 @@
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#!/dashboard">Home</a></li>
-    <li><a href="#!/animals">Animals</a></li>
-    <li><a href="#!/plants">Plant & Tree</a></li>
-  </ul>
-
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
-  <div class="container" ng-view></div>
-
-  <div>AngularJS seed app: v<span app-version></span></div>
+  <div ng-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -38,9 +29,12 @@
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
+  <script src="layout/legacy/header/header.js"></script>
+  <script src="layout/legacy/layout-legacy.js"></script>
   <script src="dashboard/dashboard.js"></script>
   <script src="plant-list/plant-list.js"></script>
   <script src="animal-list/animal-list.js"></script>
+  <script src="animal-import/animal-import.js"></script>
   <script src="animal-detail/animal-detail.js"></script>
   <script src="animal-edit/animal-edit.js"></script>
   <script src="new-animal/new-animal.js"></script>

@@ -21,6 +21,10 @@ angular.module('myApp.animalList', ['ngRoute'])
     $location.path('/animals/new');
   }
 
+  $scope.goToImport = () => {
+    $location.path('/animal-import');
+  }
+
   $scope.goToDetail = (id) => {
     $location.path(`/animals/${id}`);
   }

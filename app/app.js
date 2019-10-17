@@ -9,6 +9,8 @@ angular.module('myApp', [
   'myApp.animalDetail',
   'myApp.editAnimal',
   'myApp.plantList',
+  'myApp.legacyHeader',
+  'myApp.importAnimal',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

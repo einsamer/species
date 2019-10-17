@@ -1,0 +1,21 @@
+<legacy-template>
+  <form >
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <label for="animal_import_file">Animal import file</label>
+        <input
+          type="file"
+          name="animal_import_file"
+          id="animal_import_file" 
+          ng-model="fileImport"
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="submit" value="Import" ng-click="submitForm()"/>
+      </div>
+    </div>
+  </form>
+  {{fileImport[0].name}}
+</legacy-template>
