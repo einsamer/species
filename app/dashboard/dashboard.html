@@ -1,7 +1,51 @@
 <legacy-template>
-  <div class="row clearfix">
-    <div class="col-md-12">
-      This is the partial dashboard.{{type}}
-    </div>
+  <div class="row" id="watch-digest-apply">
+      {{data.time}}
+
+      <br/>
+      <button ng-click="updateTime()">update time - ng-click</button>
+      <button id="updateTimeButton">update time</button>
   </div>
+  <hr />
+  <script type="text/ng-template" id="group-template.html">
+    <div class="panel-heading">
+      <h4 class="panel-title" style="color:#fa39c3">
+        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+          <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+            {{heading}}
+          </span>
+        </a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" uib-collapse="!isOpen">
+      <div class="panel-body" style="text-align: right" ng-transclude></div>
+    </div>
+  </script>
+
+  <p>
+    <button type="button" class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last
+      panel</button>
+    <button type="button" class="btn btn-default btn-sm"
+      ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
+  </p>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ng-model="oneAtATime">
+      Open only one at a time
+    </label>
+  </div>
+  <uib-accordion close-others="oneAtATime" template-url="dashboard/test-accordion.html">
+    <div uib-accordion-group class="panel-default" heading="Static Header, initially expanded"
+      is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled"
+      template-url="dashboard/test-accordion-group.html">
+      This content is straight in the template.
+    </div>
+    <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups"
+      template-url="dashboard/test-accordion-group.html">
+      {{group.content}}
+    </div>
+  </uib-accordion>
+  <hr />
+  <button class="btn btn-primary" ng-click="modalOpen()">Open Modal</button>
 </legacy-template>

@@ -3,6 +3,9 @@
 // Declare app level module which depends on views, and core components
 angular.module('myApp', [
   'ngRoute',
+  'ngAnimate',
+  'ngSanitize',
+  'ui.bootstrap',
   'myApp.dashboard',
   'myApp.animalList',
   'myApp.newAnimal',
@@ -11,7 +14,8 @@ angular.module('myApp', [
   'myApp.plantList',
   'myApp.legacyHeader',
   'myApp.importAnimal',
-  'myApp.version'
+  'myApp.version',
+  'ui.grid'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
