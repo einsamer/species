@@ -15,10 +15,30 @@ angular.module('myApp', [
   'myApp.legacyHeader',
   'myApp.importAnimal',
   'myApp.version',
-  'ui.grid'
+  'ui.grid',
+  'myApp.table-list'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/'});
-}]);
+}])
+.directive("checkboxArray", () => {
+  return {
+    restrict: 'E',
+    scope: {
+      listOption: '<listOption',
+      valueField: '<valueField',
+      textField: '<textField',
+      ngModel: '=ngModel',
+    },
+    templateUrl: "checkbox-array.html",
+    controller: () => {
+      this.$onInit = function() {
+        console.log(this.hasOwnProperty('listOption')) // true
+        console.log(this.hasOwnProperty('ngModel')) // false
+      }
+    }
+  }
+})
+;

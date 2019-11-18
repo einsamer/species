@@ -27,10 +27,16 @@
       </div>
     </div>
     <div class="row">
+      <div class="form-group col-md-12">
+        <checkbox-array list-option="habitats" value-field="'id'" text-field="'name'"></checkbox-array>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-12">
         <input type="submit" class="btn btn-primary" value="Save" ng-disabled="newAnimal.$invalid" />
         <input class="btn btn-warning" type="button" value="Cancel" />
       </div>
     </div>
+    
   </form>
 </legacy-template>

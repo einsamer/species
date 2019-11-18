@@ -18,4 +18,19 @@ angular.module('myApp.newAnimal', ['ngRoute'])
         $location.path('/animals');
       })
   }
+
+  $scope.habitats = [
+    {
+      id: 'water',
+      name: 'Water',
+    },
+    {
+      id: 'soil',
+      name: 'Soil',
+    },
+    {
+      id: 'hybrid',
+      name: 'Hybrid',
+    }
+  ]
 }]);

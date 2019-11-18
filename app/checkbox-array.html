@@ -1,0 +1,6 @@
+<div class="checkbox" ng-repeat="option in listOption">
+  <label>
+    <input type="checkbox" ng-false-value="" ng-true-value="valueField ? option[valueField] : option" /> 
+    {{ textField ? option[textField] : option }}
+  </label>
+</div>
